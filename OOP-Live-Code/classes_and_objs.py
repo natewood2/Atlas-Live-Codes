@@ -4,19 +4,20 @@
 class Book:
     # Constructor method with parameters for title, author, and pages
     def __init__(self, title, author, pages):
-        # Instance variables initialized with values passed during object creation
-        self.title = title
+        self.title = title 
         self.author = author
         self.pages = pages
 
     # Method to return a formatted string with book details
+    # A Method is just a function within a class
     def book_details(self):
-        # Return the book's title, author, and page count
+        # Return the book's title, author, and pages
         return f"| {self.title:<30} | {self.author:<20} | {self.pages:>5} |"
+    
 
-print("*****************************************************************")
-print("************************** BOOK CATALOGUE ***********************")
-print("*****************************************************************")
+print("+---------------------------------------------------------------+")
+print("|                      BOOK CATALOGUE LIST                      |")
+print("+---------------------------------------------------------------+")
 
 # Create a list of Book objects with different book details
 books = [
@@ -30,13 +31,13 @@ books = [
 # Print table header with column titles aligned and formatted
 print(f"| {'Title':<30} | {'Author':<20} | {'Pages':>5} |")
 # Print a separator line to visually separate the header from the data rows
-print(f"+{'-'*32}+{'-'*22}+{'-'*8}+")
+print(f"+{'-'*32}+{'-'*22}+{'-'*7}+")
 
 # Loop through each book object in the books list
 for book in books:
     print(book.book_details())
-    print(f"+{'-'*32}+{'-'*22}+{'-'*8}+")
+    print(f"+{'-'*32}+{'-'*22}+{'-'*7}+")
 
-print("*****************************************************************")
-print("********************** END OF CATALOGUE LIST ********************")
-print("*****************************************************************")
+
+print("|                      END OF CATALOGUE LIST                    |")
+print("+---------------------------------------------------------------+")
